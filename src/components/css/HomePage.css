@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#homePage {
+    font-family: "Lato", sans-serif;
+    text-align: center;
+    color: rgb(6, 10, 31);
+}
+
+#topBackground {
+    display: block;
+    background-image: url("/src/assets/bg-1.PNG");
+    background-size: 105%;
+    background-position: center;
+    filter: brightness(0.75);
+    height: 300px;
+}
+
+#homePageLogo {
+    position: absolute;
+    top: 10px;
+    left: 40%;
+}
+
+#mainSlogan {
+    font-family: "Playwrite GB S", cursive;
+    margin-top: 100px;
+    font-size: 50px;
+    font-weight: 400;
+    color: #e24f23;
+    text-shadow: 0 1px #bb370f, 0 2px #bb370f, 0 4px #bb370f;
+}
+
+#hotpotInfoContainer {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: left;
+}
+
+#aboutBoilingPoint {
+    margin: 100px 0 50px 0;
+    width: 400px;
+}
+
+#aboutShabuShabu {
+    width: 400px;
+}
+
+#whatIsShabuShabu {
+    font-weight: 800;
+    color: #e24f23;
+    display: flex;
+    gap: 5px;
+}
+
+
+
+@keyframes bounce {
+    0% {transform: scale(1, 1) translateY(0);}
+    10% {transform: scale(1.1, .9) translateY(0);}
+    30% {transform: scale(.9, 1.1) translateY(-10px);}
+    50% {transform: scale(1.05, .95) translateY(0);}
+    58% {transform: scale(1, 1) translateY(-7px);}
+    65% {transform: scale(1, 1) translateY(0);}
+    100% {transform: scale(1, 1) translateY(0);}
+}
+
+.what{
+    animation: bounce 1s ease infinite;
+}
+
+.is {
+    animation: bounce 1s ease infinite .2s;
+}
+
+.shabu {
+    animation: bounce 1s ease infinite .4s;
+}
+
+.shabuu {
+    animation: bounce 1s ease infinite .6s;
+}
+
+
+#setSection {
+    background-color: rgb(1, 1, 10);
+    color: white;
+    margin-top: 100px;
+    padding: 100px 0;
+}
+
+#sets {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+#normalSetImg {
+    border-radius: 10px;
+}
+
+#premiumSetImg {
+    border-radius: 10px;
+}
+
+#setsTitile {
+    font-family: "Playwrite GB S", cursive;
+    font-size: 50px;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+#setsSubTitle {
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+#wagyu {
+    color: #ad2121;
+    font-weight: 800;
+}
+
+#normalSet, #premiumSet{
+    display: flex;
+    padding-right: 55px;
+    
+    
+}
+
+#normalSetTitle, #premiumSetTitle {
+    font-weight: 300;
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+    margin-left: 55px;
+}
+
+#normalListInfo, #premiumListInfo {
+    font-size: 15px;
+    margin-left: 55px;
+    font-weight: 200;
+    list-style: none;
+    text-align: left;
+}
+
+.setLists {
+    margin: 10px 0;
+}
+
+.price {
+    font-weight: 300;
+    color:#e29f23; 
+    text-align: left;
+    margin: 55px;
+}
+
+#locations {
+    height: 400px;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+#locationsTitle {
+    font-size: 25px;
+}
+
+#locationsLinkButton {
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 25px;
+    background-color: white;
+}
+
+#locationsLinkButton:hover {
+    background-color: rgba(128, 128, 128, 0.178);
+    cursor: pointer;
+}
+
+#locationIcon {
+    animation: bounce 1s ease infinite .4s;
+}
