@@ -3,9 +3,24 @@ import drawing from "../assets/hotpot drawing.jpg"
 import normalSet from "../assets/normal-set.jpg"
 import premiumSet from "../assets/wagyu-beef.jpg"
 import locationIcon from "../assets/locationIcon.svg"
+import mapOfUSA from "../assets/mapOfUSA.jpg"
+import facebookLogo from "../assets/facebookLogo.svg"
+import instagramLogo from "../assets/instagramLogo.svg"
 
+import LazyLoad from "react-lazyload"
 import "./css/HomePage.css"
 const HomePage = () => {
+
+    const locationsArray = [1, 2, 3, 4, 5]
+
+    const LocationIcons = () => locationsArray.map(location => (
+        <img 
+        key={location}
+        src={locationIcon}
+        alt="locationIcon"
+        className={`locationIconOnMap location${location}`}
+        width="10px"/>
+    ))
 
     return (
          <div id="homePage">
@@ -50,52 +65,77 @@ const HomePage = () => {
                 <p id="setsSubTitle">Enjoy the freedom of self-serve hot pot! Upgrade to Premium Set for endless servings of our melt-in-your-mouth <span id="wagyu">Wagyu beef</span>.</p>
 
                 <div id="sets">
-                <div id="normalSet">
-                    <img id="normalSetImg" src={normalSet} alt="normal set" width="300px" height="500px" />
-                    <div id="normalSetInfo">
-                        <p id="normalSetTitle">Normal Set</p>
-                            <div className="listContainer">
-                                <ul id="normalListInfo">
-                                    <li className="setLists">Time limit - 1:30 hours</li>
-                                    <li className="setLists">Broth - Kombu, Dashi, and Spicy Miso</li>
-                                    <li className="setLists">Unlimited desserts, soft drinks and juices</li>
-                                    <li className="setLists">Unlimited self-serve hot pot</li>
-                                </ul>
+                    <LazyLoad>
+                        <div id="normalSet">
+                            <img id="normalSetImg" src={normalSet} alt="normal set" width="300px" height="500px" />
+                            <div id="normalSetInfo">
+                                <p id="normalSetTitle">Normal Set</p>
+                                    <div className="listContainer">
+                                        <ul id="normalListInfo">
+                                            <li className="setLists">Time limit - 1:30 hours</li>
+                                            <li className="setLists">Broth - Kombu, Dashi, and Spicy Miso</li>
+                                            <li className="setLists">Unlimited desserts, soft drinks and juices</li>
+                                            <li className="setLists">Unlimited self-serve hot pot</li>
+                                        </ul>
+                                    </div>
+                                    <p className="price">$24.99 PER PERSON</p>
                             </div>
-                            <p className="price">$24.99 PER PERSON</p>
-                    </div>
-                    
-                </div>
+                            
+                        </div>
+                    </LazyLoad>
+                
+                    <LazyLoad>
+                        <div id="premiumSet">
+                            <img id="premiumSetImg" src={premiumSet} alt="premium set" width="300px" height="500px" />
 
-                <div id="premiumSet">
-                    <img id="premiumSetImg" src={premiumSet} alt="premium set" width="300px" height="500px" />
-
-                    <div id="premiumSetInfo">
-                        <p id="premiumSetTitle">Premium Set</p>
-                            <div className="listContainer">
-                                <ul id="premiumListInfo">
-                                    <li className="setLists">Time limit - 2:30 hours</li>
-                                    <li className="setLists">Broth - Kombu, Dashi, and Spicy Miso</li>
-                                    <li className="setLists">Unlimited <span id="wagyu">Wagyu beef</span></li>
-                                    <li>Unlimited beer</li>
-                                    <li className="setLists">Unlimited desserts, soft drinks and juices</li>
-                                    <li className="setLists">Unlimited self-serve hot pot</li>
-                                </ul>
+                            <div id="premiumSetInfo">
+                                <p id="premiumSetTitle">Premium Set</p>
+                                    <div className="listContainer">
+                                        <ul id="premiumListInfo">
+                                            <li className="setLists">Time limit - 2:30 hours</li>
+                                            <li className="setLists">Broth - Kombu, Dashi, and Spicy Miso</li>
+                                            <li className="setLists">Unlimited <span id="wagyu">Wagyu beef</span></li>
+                                            <li>Unlimited beer</li>
+                                            <li className="setLists">Unlimited desserts, soft drinks and juices</li>
+                                            <li className="setLists">Unlimited self-serve hot pot</li>
+                                        </ul>
+                                    </div>
+                                    <p className="price">$49.99 PER PERSON</p>
                             </div>
-                            <p className="price">$49.99 PER PERSON</p>
-                    </div>
-                </div>
+                        </div>
+                    </LazyLoad>
+                
                 </div>
                 
             </div>
 
             <div id="locations">
                 <h1 id="locationsTitle">Proudly Serving Shabu-Shabu Delights Across the United States</h1>
-                <div id="locationsLinkButton">
-                    Our Locations <img id="locationIcon" src={locationIcon} alt="locationIcon" width="20px" /> 
+            <div id="mapAndButton">
+                <div id="locationMap">
+                    <img src={mapOfUSA} alt="map of usa" width="400px"  />
+                    <LocationIcons/>
                 </div>
+            
+                
+                <div id="locationsLinkButton">
+                    Book a table at the nearest location <img id="locationIcon" src={locationIcon} alt="locationIcon" width="20px" /> 
+                </div>
+            </div>
+                
                 
             </div>
+
+            <footer id="footerSection">
+
+                <h2>Follow Us</h2>
+                <div id="socialLogosContainer">
+                    <img className="socialLogos" src={facebookLogo} alt="facebook logo" width="13px"/>
+                    <img className="socialLogos" src={instagramLogo} alt="instagram logo" width="20px" />
+                </div>
+                
+                <p>&copy; BOILING POINT RESTAURANT. All rights Reserved</p>
+            </footer>
 
         </div>
       

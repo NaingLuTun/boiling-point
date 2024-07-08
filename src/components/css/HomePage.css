@@ -72,6 +72,15 @@
     100% {transform: scale(1, 1) translateY(0);}
 }
 
+@keyframes appearFromLeftSide {
+    0% {transform:  scale(1, 1) translateX(-500px);}
+    100% {transform:  scale(1, 1) translateX(0);}
+}
+@keyframes appearFromRightSide {
+    0% {transform:  scale(1, 1) translateX(500px);}
+    100% {transform:  scale(1, 1) translateX(0);}
+}
+
 .what{
     animation: bounce 1s ease infinite;
 }
@@ -90,7 +99,7 @@
 
 
 #setSection {
-    background-color: rgb(1, 1, 10);
+    background-color: rgb(2, 2, 12);
     color: white;
     margin-top: 100px;
     padding: 100px 0;
@@ -130,8 +139,14 @@
 #normalSet, #premiumSet{
     display: flex;
     padding-right: 55px;
-    
-    
+}
+
+#normalSet {
+    animation: appearFromLeftSide 1.5s ease;
+}
+
+#premiumSet {
+    animation: appearFromRightSide 1.5s ease;
 }
 
 #normalSetTitle, #premiumSetTitle {
@@ -145,7 +160,7 @@
 #normalListInfo, #premiumListInfo {
     font-size: 15px;
     margin-left: 55px;
-    font-weight: 200;
+    font-weight: 300;
     list-style: none;
     text-align: left;
 }
@@ -162,8 +177,8 @@
 }
 
 #locations {
-    height: 400px;
-    background-color: #f5f5f5;
+    background-color: white;
+    margin: 50px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -172,11 +187,14 @@
 }
 
 #locationsTitle {
+    font-family: "Playwrite GB S", cursive;
+    color: rgb(3, 0, 155);
     font-size: 25px;
+    font-weight: 400;
 }
 
 #locationsLinkButton {
-    border: 1px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
     padding: 20px;
     border-radius: 10px;
     font-size: 25px;
@@ -184,10 +202,76 @@
 }
 
 #locationsLinkButton:hover {
-    background-color: rgba(128, 128, 128, 0.178);
+    background-color: rgb(2, 3, 17);
+    color: white;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 22px 0 rgba(0, 0, 0, 0.10);
     cursor: pointer;
+    transition: 0.5s;
 }
 
 #locationIcon {
     animation: bounce 1s ease infinite .4s;
+}
+
+#mapAndButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+#locationMap {
+    position: relative;
+}
+
+.locationIconOnMap {
+    position: absolute;
+}
+
+
+.location1 {
+    top: 100px;
+    left: 15px;
+}
+
+.location2 {
+    top: 180px;
+    left: 170px;
+}
+
+.location3 {
+    top: 55px;
+    left: 345px;
+}
+
+.location4 {
+    top: 95px;
+    left: 247px;
+}
+
+.location5 {
+    top: 177px;
+    left: 227px;
+}
+
+#footerSection {
+    background-color: rgb(2, 2, 12);
+    color: white;
+    padding: 50px 0;
+}
+
+#footerSection > h2 {
+    font-weight: 400;
+}
+
+#socialLogosContainer {
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.socialLogos:hover {
+    cursor: pointer;
 }
