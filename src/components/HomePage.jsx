@@ -1,4 +1,8 @@
-import logo from "../assets/download.png"
+import { useContext, useEffect, useMemo, useState } from "react"
+import { LocationContext } from "../contexts/LocationContext"
+import LazyLoad from "react-lazyload"
+
+import logo from "../assets/bpLogo-removebg-preview.png"
 import drawing from "../assets/hotpot drawing.jpg"
 import normalSet from "../assets/normal-set.jpg"
 import premiumSet from "../assets/wagyu-beef.jpg"
@@ -6,14 +10,24 @@ import locationIcon from "../assets/locationIcon.svg"
 import mapOfUSA from "../assets/mapOfUSA.jpg"
 import facebookLogo from "../assets/facebookLogo.svg"
 import instagramLogo from "../assets/instagramLogo.svg"
+import restaurantImageOne from "../assets/restaurantImg1.jpg"
+import restaurantImageTwo from "../assets/restaurantImg2.jpg"
+import restaurantImageThree from "../assets/restaurantImg3.jpg"
+import restaurantImageFour from "../assets/restaurantImg4.jpg"
+import homepageTopBackgroundImg from "../assets/bg-1.png"
 
-import LazyLoad from "react-lazyload"
+
 import "./css/HomePage.css"
 const HomePage = () => {
 
-    const locationsArray = [1, 2, 3, 4, 5]
 
-    const LocationIcons = () => locationsArray.map(location => (
+    const {selectedLocation, setSelectedLocation, CAlocationConcard, CAlocationMilpitas, TXlocationAustin, TXlocationHouston, NVlocationLasVegas, NYlocationNewYorkCity} = useContext(LocationContext)
+
+
+    const locationsIconArray = [1, 2, 3, 4]
+
+
+    const LocationIcons = () => locationsIconArray.map(location => (
         <img 
         key={location}
         src={locationIcon}
@@ -22,17 +36,48 @@ const HomePage = () => {
         width="10px"/>
     ))
 
+    const restaurantImagesArray = [restaurantImageOne, restaurantImageTwo, restaurantImageThree, restaurantImageFour]
+
+    const RestaurantImages = () => (
+        restaurantImagesArray.map((images, index) => (
+            <img
+            key={index}
+            src={images}
+            alt="restaurantImages"
+            className={`retaurantImages restaurant${index}`}
+            width="250px"
+            height="160px"/>
+        )))
+
+    
+    const locationsArray = [CAlocationConcard, CAlocationMilpitas, TXlocationAustin, TXlocationHouston, NVlocationLasVegas, NYlocationNewYorkCity]
+
+    const handleViewLocation = (selectedLocation) => {
+        setSelectedLocation(selectedLocation)
+    }
+
+    const Locations = () => (
+        locationsArray.map(location => (
+            <div key={location.id} className="locationsDetails">
+                <h2>{location.cityName}</h2>
+                <p>{location.address}</p>
+                <p>{location.phNum}</p>
+
+                <a href="location-page"><button href="location-page" className="locationsDetailsButtton" onClick={() => handleViewLocation(location)}>Details</button></a>
+                <hr />
+            </div>
+        ))
+    )
+
     return (
-         <div id="homePage">
+         <div id="home-page">
 
             
             <div id="homePageTopsection">
-                <div id="topBackground"></div>
+                <img id="topBackground" src={homepageTopBackgroundImg} alt="homePageBackground-image"/>
 
-                <div id="navBar">
-
-                </div>
-                <img id="homePageLogo" src={logo} alt="logo" width="300px" />
+                {/* <NavBat/> */}
+                <a href="home-page"><img id="homePageLogo" src={logo} alt="logo" width="300px" /></a>
 
                 <h1 id="mainSlogan">Your All-You-Can-Eat-Hot-Pot Paradise</h1>
                 <div id="hotpotInfoContainer">
@@ -70,19 +115,20 @@ const HomePage = () => {
                             <img id="normalSetImg" src={normalSet} alt="normal set" width="300px" height="500px" />
                             <div id="normalSetInfo">
                                 <p id="normalSetTitle">Normal Set</p>
-                                    <div className="listContainer">
-                                        <ul id="normalListInfo">
-                                            <li className="setLists">Time limit - 1:30 hours</li>
-                                            <li className="setLists">Broth - Kombu, Dashi, and Spicy Miso</li>
-                                            <li className="setLists">Unlimited desserts, soft drinks and juices</li>
-                                            <li className="setLists">Unlimited self-serve hot pot</li>
-                                        </ul>
-                                    </div>
-                                    <p className="price">$24.99 PER PERSON</p>
+                                <div className="listContainer">
+                                    <ul id="normalListInfo">
+                                        <li className="setLists">Time limit - 1:30 hours</li>
+                                        <li className="setLists">Broth - Kombu, Dashi, and Spicy Miso</li>
+                                        <li className="setLists">Unlimited desserts, soft drinks and juices</li>
+                                        <li className="setLists">Unlimited self-serve hot pot</li>
+                                    </ul>
+                                </div>
+                                <p className="price">$24.99 PER PERSON</p>
                             </div>
                             
                         </div>
                     </LazyLoad>
+                    
                 
                     <LazyLoad>
                         <div id="premiumSet">
@@ -95,7 +141,7 @@ const HomePage = () => {
                                             <li className="setLists">Time limit - 2:30 hours</li>
                                             <li className="setLists">Broth - Kombu, Dashi, and Spicy Miso</li>
                                             <li className="setLists">Unlimited <span id="wagyu">Wagyu beef</span></li>
-                                            <li>Unlimited beer</li>
+                                            <li className="setLists">Unlimited beer, sakes, and cocktails</li>
                                             <li className="setLists">Unlimited desserts, soft drinks and juices</li>
                                             <li className="setLists">Unlimited self-serve hot pot</li>
                                         </ul>
@@ -111,19 +157,31 @@ const HomePage = () => {
 
             <div id="locations">
                 <h1 id="locationsTitle">Proudly Serving Shabu-Shabu Delights Across the United States</h1>
-            <div id="mapAndButton">
-                <div id="locationMap">
-                    <img src={mapOfUSA} alt="map of usa" width="400px"  />
-                    <LocationIcons/>
+
+                <div id="restaurantImagesContainer">
+                    
+                    <RestaurantImages/>
+
                 </div>
+                
+                <div id="mapAndButton">
+                    <div id="locationMap">
+                        <img src={mapOfUSA} alt="map of usa" width="400px"  />
+                        <LocationIcons/>
+                    </div>
+                
+                    
+                    <div id="bookingText">
+                        Book a table at the nearest location <img id="locationIcon" src={locationIcon} alt="locationIcon" width="20px" /> 
+                    </div>
+                </div>
+
+                <div id="locationDetailsContainer">
+                    <Locations/>
+                </div>
+                
+                
             
-                
-                <div id="locationsLinkButton">
-                    Book a table at the nearest location <img id="locationIcon" src={locationIcon} alt="locationIcon" width="20px" /> 
-                </div>
-            </div>
-                
-                
             </div>
 
             <footer id="footerSection">
