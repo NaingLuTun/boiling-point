@@ -53,7 +53,7 @@ const HomePage = () => {
     const locationsArray = [CAlocationConcard, CAlocationMilpitas, TXlocationAustin, TXlocationHouston, NVlocationLasVegas, NYlocationNewYorkCity]
 
     const handleViewLocation = (selectedLocation) => {
-        setSelectedLocation(selectedLocation)
+        localStorage.setItem("selected location", JSON.stringify(selectedLocation))
     }
 
     const Locations = () => (
@@ -118,7 +118,7 @@ const HomePage = () => {
                                 <div className="listContainer">
                                     <ul id="normalListInfo">
                                         <li className="setLists">Time limit - 1:30 hours</li>
-                                        <li className="setLists">Broth - Kombu, Dashi, and Spicy Miso</li>
+                                        <li className="setLists">Unlimited broth refill</li>
                                         <li className="setLists">Unlimited desserts, soft drinks and juices</li>
                                         <li className="setLists">Unlimited self-serve hot pot</li>
                                     </ul>
@@ -139,7 +139,7 @@ const HomePage = () => {
                                     <div className="listContainer">
                                         <ul id="premiumListInfo">
                                             <li className="setLists">Time limit - 2:30 hours</li>
-                                            <li className="setLists">Broth - Kombu, Dashi, and Spicy Miso</li>
+                                            <li className="setLists">Unlimited broth refill</li>
                                             <li className="setLists">Unlimited <span id="wagyu">Wagyu beef</span></li>
                                             <li className="setLists">Unlimited beer, sakes, and cocktails</li>
                                             <li className="setLists">Unlimited desserts, soft drinks and juices</li>

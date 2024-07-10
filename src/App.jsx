@@ -11,7 +11,7 @@ function App() {
         <Routes>
           <Route path="/home-page" element={<HomePage />} />
           <Route path="/location-page" element={<LocationPage />} />
-          {/* <Route path="*" element={<Navigate to="/home-page" />} /> */}
+          <Route path="*" element={<Navigate to="/home-page" />} />
         </Routes>
       </Router>
     </LocationContextProvider>
