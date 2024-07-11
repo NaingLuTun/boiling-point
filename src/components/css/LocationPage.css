@@ -15,6 +15,19 @@
     color: rgb(1, 4, 8);
 }
 
+
+#logo {
+    position: absolute;
+    top: -2px;
+    left: 50px;
+}
+
+#homePageLinkImage {
+    background-color: black;
+    width: 100%;
+    height: 80px;
+}
+
 #locationImageContainer {
     width: 100%;
     margin-top: 100px;
@@ -145,6 +158,11 @@
     text-decoration-thickness: 1px;
 }
 
+.wagyu {
+    color: #ad2121;
+    font-weight: 800;
+}
+
 .setInfoSections {
     margin: 80px 0;
 }
@@ -174,4 +192,14 @@
     font-weight: 800;
     font-size: 18px;
     margin: 5px 0;
+}
+
+.listItemsDescription {
+    opacity: 0.6;
+}
+
+.typeOfDrinkNoAlco {
+    color: #c03004;
+    font-size: 18px;
+
 }

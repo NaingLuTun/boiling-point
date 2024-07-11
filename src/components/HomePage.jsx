@@ -16,6 +16,8 @@ import restaurantImageThree from "../assets/restaurantImg3.jpg"
 import restaurantImageFour from "../assets/restaurantImg4.jpg"
 import homepageTopBackgroundImg from "../assets/bg-1.png"
 
+import { NavBar } from "./NavBar"
+
 
 import "./css/HomePage.css"
 const HomePage = () => {
@@ -52,8 +54,13 @@ const HomePage = () => {
     
     const locationsArray = [CAlocationConcard, CAlocationMilpitas, TXlocationAustin, TXlocationHouston, NVlocationLasVegas, NYlocationNewYorkCity]
 
+    useEffect(() => {
+        localStorage.setItem("selected location", "home-page")
+    }, [])
+
     const handleViewLocation = (selectedLocation) => {
         localStorage.setItem("selected location", JSON.stringify(selectedLocation))
+        
     }
 
     const Locations = () => (
@@ -63,7 +70,7 @@ const HomePage = () => {
                 <p>{location.address}</p>
                 <p>{location.phNum}</p>
 
-                <a href="location-page"><button href="location-page" className="locationsDetailsButtton" onClick={() => handleViewLocation(location)}>Details</button></a>
+                <a href="location-page"><button className="locationsDetailsButtton" onClick={() => handleViewLocation(location)}>Details</button></a>
                 <hr />
             </div>
         ))
@@ -71,12 +78,12 @@ const HomePage = () => {
 
     return (
          <div id="home-page">
-
             
+            <NavBar className="navBar"/>
             <div id="homePageTopsection">
                 <img id="topBackground" src={homepageTopBackgroundImg} alt="homePageBackground-image"/>
 
-                {/* <NavBat/> */}
+                
                 <a href="home-page"><img id="homePageLogo" src={logo} alt="logo" width="300px" /></a>
 
                 <h1 id="mainSlogan">Your All-You-Can-Eat-Hot-Pot Paradise</h1>
@@ -107,7 +114,7 @@ const HomePage = () => {
 
             <div id="setSection">
                 <h2 id="setsTitile">Available sets</h2>
-                <p id="setsSubTitle">Enjoy the freedom of self-serve hot pot! Upgrade to Premium Set for endless servings of our melt-in-your-mouth <span id="wagyu">Wagyu beef</span>.</p>
+                <p id="setsSubTitle">Enjoy the freedom of self-serve hot pot! Upgrade to Premium Set for endless servings of our melt-in-your-mouth <span className="wagyu">Wagyu beef</span>.</p>
 
                 <div id="sets">
                     <LazyLoad>
@@ -140,8 +147,8 @@ const HomePage = () => {
                                         <ul id="premiumListInfo">
                                             <li className="setLists">Time limit - 2:30 hours</li>
                                             <li className="setLists">Unlimited broth refill</li>
-                                            <li className="setLists">Unlimited <span id="wagyu">Wagyu beef</span></li>
-                                            <li className="setLists">Unlimited beer, sakes, and cocktails</li>
+                                            <li className="setLists">Unlimited <span className="wagyu">Wagyu beef</span></li>
+                                            <li className="setLists">Unlimited beers, sakes, and cocktails</li>
                                             <li className="setLists">Unlimited desserts, soft drinks and juices</li>
                                             <li className="setLists">Unlimited self-serve hot pot</li>
                                         </ul>

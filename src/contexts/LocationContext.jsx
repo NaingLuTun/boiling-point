@@ -1,6 +1,5 @@
 import { createContext, useState } from "react"
-import { HomePage } from "../components/HomePage"
-import { LocationPage } from "../components/LocationPage"
+
 import concardLocationImg from "../assets/concardLocationImg.png"
 import milpitasLocationImg from "../assets/milpitasLocationImg.png"
 import austinLocationImg from "../assets/austinLocationImg.png"
