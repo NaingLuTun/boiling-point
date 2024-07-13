@@ -8,8 +8,6 @@ import normalSet from "../assets/normal-set.jpg"
 import premiumSet from "../assets/wagyu-beef.jpg"
 import locationIcon from "../assets/locationIcon.svg"
 import mapOfUSA from "../assets/mapOfUSA.jpg"
-import facebookLogo from "../assets/facebookLogo.svg"
-import instagramLogo from "../assets/instagramLogo.svg"
 import restaurantImageOne from "../assets/restaurantImg1.jpg"
 import restaurantImageTwo from "../assets/restaurantImg2.jpg"
 import restaurantImageThree from "../assets/restaurantImg3.jpg"
@@ -17,6 +15,7 @@ import restaurantImageFour from "../assets/restaurantImg4.jpg"
 import homepageTopBackgroundImg from "../assets/bg-1.png"
 
 import { NavBar } from "./NavBar"
+import { Footer } from "./Footer"
 
 
 import "./css/HomePage.css"
@@ -113,7 +112,7 @@ const HomePage = () => {
             </div>
 
             <div id="setSection">
-                <h2 id="setsTitile">Available sets</h2>
+                <h2 id="setsTitle">Available sets</h2>
                 <p id="setsSubTitle">Enjoy the freedom of self-serve hot pot! Upgrade to Premium Set for endless servings of our melt-in-your-mouth <span className="wagyu">Wagyu beef</span>.</p>
 
                 <div id="sets">
@@ -173,7 +172,7 @@ const HomePage = () => {
                 
                 <div id="mapAndButton">
                     <div id="locationMap">
-                        <img src={mapOfUSA} alt="map of usa" width="400px"  />
+                        <img src={mapOfUSA} id="mapOfUSA" alt="map of usa" width="400px"  />
                         <LocationIcons/>
                     </div>
                 
@@ -191,16 +190,7 @@ const HomePage = () => {
             
             </div>
 
-            <footer id="footerSection">
-
-                <h2>Follow Us</h2>
-                <div id="socialLogosContainer">
-                    <img className="socialLogos" src={facebookLogo} alt="facebook logo" width="13px"/>
-                    <img className="socialLogos" src={instagramLogo} alt="instagram logo" width="20px" />
-                </div>
-                
-                <p>&copy; BOILING POINT RESTAURANT. All rights Reserved</p>
-            </footer>
+            <Footer/>
 
         </div>
       

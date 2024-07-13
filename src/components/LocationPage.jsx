@@ -2,6 +2,7 @@ import { useState } from "react"
 import logo from "../assets/bpLogo-removebg-preview.png"
 import "./css/LocationPage.css"
 import { NavBar } from "./NavBar"
+import { Footer } from "./Footer"
 
 
 
@@ -406,6 +407,8 @@ const LocationPage = () => {
                 
 
             </div>
+
+            <Footer/>
         </>
     )
 }

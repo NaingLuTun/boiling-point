@@ -8,6 +8,7 @@
     box-sizing: border-box;
 }
 
+
 #home-page {
     font-family: "Lato", sans-serif;
     text-align: center;
@@ -20,7 +21,6 @@
 
 #topBackground {
     width: 100%;
-    height: 400px;
     filter: brightness(0.75);
 }
 
@@ -102,6 +102,7 @@
 #setSection {
     background-color: rgb(2, 2, 12);
     color: white;
+    height: 900;
     margin-top: 100px;
     padding: 100px 0;
 }
@@ -120,7 +121,7 @@
     border-radius: 10px;
 }
 
-#setsTitile {
+#setsTitle {
     font-family: "Space Grotesk", sans-serif;
     color: #e24f23;
     font-size: 50px;
@@ -192,7 +193,7 @@
 #locationsTitle {
     font-family: "Space Grotesk", sans-serif;
     color: rgb(2, 0, 95);
-    font-size: 30px;
+    font-size: 50px;
     font-weight: 500;
 }
 
@@ -293,25 +294,190 @@
     transition: 0.5s;
 }
 
-#footerSection {
-    background-color: rgb(2, 2, 12);
-    color: white;
-    padding: 50px 0;
+@media (max-width: 500px) {
+
+
+    #mainSlogan {
+        font-size: 30px;
+    } 
+    #hotPotDrawing {
+        width: 300px;
+        height: 300px;
+    }
+
+    #hotpotInfoContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    #aboutBoilingPoint {
+        margin: 100px 0 50px 0;
+        width: 100%;
+    }
+    
+    #aboutShabuShabu {
+        width: 100%;
+        margin: auto;
+    }
+
+    #setSection {
+        background-color: rgb(2, 2, 12);
+        color: white;
+        height: 900;
+        margin-top: 100px;
+        padding: 20px 15px;
+    }
+
+    #sets {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    #normalSet, #premiumSet{
+        display: flex;
+        padding: 0;
+    }
+
+    #normalSetImg, #premiumSetImg {
+        width: 160px;
+        height: 280px;
+    }
+
+
+    #setsTitle {
+        font-family: "Space Grotesk", sans-serif;
+        color: #e24f23;
+        font-size: 30px;
+        font-weight: 400;
+        margin-bottom: 50px;
+    }
+    
+
+    #normalSetTitle, #premiumSetTitle {
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+        margin-bottom: 30px;
+        text-align: left;
+        margin-left: 15px;
+    }
+    
+    #normalListInfo, #premiumListInfo {
+        font-size: 12px;
+        margin-left: 15px;
+        font-weight: 300;
+        list-style: none;
+        text-align: left;
+    }
+    
+    .setLists {
+        margin: 10px 0;
+    }
+    
+    .price {
+        font-weight: 300;
+        color:#e29f23;
+        font-size: 10px;
+        margin: 10px 0 0 15px;
+        text-align: left;
+        
+    }
+
+    #locations {
+        padding: 10px;
+    }
+
+    #locationsTitle {
+        font-family: "Space Grotesk", sans-serif;
+        color: rgb(2, 0, 95);
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    #mapAndButton {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    #bookingText {
+        font-size: 20px;
+        background-color: white;
+    }
+
+    #locationIcon {
+        width: 10px;
+        animation: bounce 1s ease infinite .4s;
+    }
+
+    #locationMap {
+        width: 350px;
+        position: relative;
+    }
+
+    #mapOfUSA{
+        width: 100%;
+    }
+    
+    .locationIconOnMap {
+        position: absolute;
+    }
+    
+    
+    .location1 {
+        top: 85px;
+        left: 12.5px;
+    }
+    
+    .location2 {
+        top: 155px;
+        left: 150px;
+    }
+    
+    .location3 {
+        top: 44px;
+        left: 302px;
+    }
+    
+    .location4 {
+        top: 70px;
+        left: 37.5px;
+    }
+    
+    #restaurantImagesContainer {
+        border-top: 1px solid grey;
+        border-bottom: 1px solid grey;
+        padding: 25px 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .retaurantImages {
+        width: 100%;
+        height: 100px;
+        border-radius: 5px;
+    }
+    
+    .retaurantImages {
+        border-radius: 5px;
+    }
+
+    #locationDetailsContainer {
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        gap: 50px;
+        margin: 50px 0;
+    }
+
+
+
 }
 
-#footerSection > h2 {
-    font-weight: 400;
-}
-
-#socialLogosContainer {
-    display: flex;
-    height: 100px;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-}
-
-.socialLogos:hover {
-    cursor: pointer;
-}
 
