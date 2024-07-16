@@ -6,7 +6,7 @@
 
 .navBar{
     position: absolute;
-    top: 0;
+    top: 10px;
     left: 20px;
     z-index: 1;
     text-align: center;
@@ -99,4 +99,57 @@
 
 .navBarLinks:hover {
     color: white;
+}
+
+@media (max-width: 500px) {
+
+    .navBar{
+
+        top: 10px;
+        left: 10px;
+    }
+
+    .menu-button {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .menu-icon, .menu-icon::before , .menu-icon::after {
+        background-color: white;
+        width: 25px;
+        height: 3px;
+        border-radius: 5px;
+    }
+    
+    .menu-icon::before, .menu-icon::after {
+        content: "";
+        width: 25px;
+        height: 3px;
+    }
+    
+    .menu-icon::before {
+        transform: translate(-12px, -8px);
+    }
+    
+    .menu-icon::after {
+        transform: translate(-12px, 8px);
+    }
+    
+    /* to form the X */
+    :is(.active) .menu-icon {
+        background-color: transparent;
+    
+        /* THIS IS TO ADD THE SPINNING EFFECT ON THE MENU ICON */
+        transform: rotate(360deg);
+    }
+    
+    /* to form the X */
+    :is(.active) .menu-icon::before {
+        transform: translateX(-12px) rotate(45deg);
+    }
+    
+    /* to form the X */
+    :is(.active) .menu-icon::after {
+        transform: translateX(-12px) rotate(-45deg);
+    }
 }

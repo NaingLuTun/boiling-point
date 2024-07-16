@@ -80,10 +80,15 @@ const HomePage = () => {
             
             <NavBar className="navBar"/>
             <div id="homePageTopsection">
-                <img id="topBackground" src={homepageTopBackgroundImg} alt="homePageBackground-image"/>
+                <div id="hompagebackgroundAndLogoContainer">
+                    <img id="topBackground" src={homepageTopBackgroundImg} alt="homePageBackground-image"/>
 
+                    <div id="homePageLogoContainer">
+                        <a href="home-page" id="homePageLogo"><img  src={logo} alt="logo" width="300px" /></a>
+                    </div>
+                    
+                </div>
                 
-                <a href="home-page"><img id="homePageLogo" src={logo} alt="logo" width="300px" /></a>
 
                 <h1 id="mainSlogan">Your All-You-Can-Eat-Hot-Pot Paradise</h1>
                 <div id="hotpotInfoContainer">
