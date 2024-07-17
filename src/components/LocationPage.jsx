@@ -113,7 +113,14 @@ const LocationPage = () => {
                 <div id="waitlistAndLocationInfo">
                     <div id="waitlist">
                         <p id="waitlistText">Waitlist</p>
-                        <p id="waitTime">Wait time : 11-20 mins</p>
+                        <div id="waitTimeContainer">
+                            <p id="waitTime">11-20 mins <span className="liveText">Live <span className="forPulsingAnimation"></span></span></p> 
+                            
+                            
+                            
+                            <p className="waitTimeForTwoPerson">wait time for 2 people</p>
+                        </div>
+                        
                         <button id="joinWaitlistBtn">Join waitlist</button>
                     </div>
                     <div id="locationInfo">
