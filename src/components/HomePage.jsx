@@ -22,7 +22,7 @@ import "./css/HomePage.css"
 const HomePage = () => {
 
 
-    const {selectedLocation, setSelectedLocation, CAlocationConcard, CAlocationMilpitas, TXlocationAustin, TXlocationHouston, NVlocationLasVegas, NYlocationNewYorkCity} = useContext(LocationContext)
+    const {CAlocationConcard, CAlocationMilpitas, TXlocationAustin, TXlocationHouston, NVlocationLasVegas, NYlocationNewYorkCity} = useContext(LocationContext)
 
 
     const locationsIconArray = [1, 2, 3, 4]

@@ -121,7 +121,7 @@ const LocationPage = () => {
                             <p className="waitTimeForTwoPerson">wait time for 2 people</p>
                         </div>
                         
-                        <button id="joinWaitlistBtn">Join waitlist</button>
+                        <a href="waitlist-page"><button id="joinWaitlistBtn">Join waitlist</button></a>
                     </div>
                     <div id="locationInfo">
                         <div id="locationAddressAndPhNumContainer">
