@@ -16,17 +16,17 @@
 }
 
 .smallText {
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .mediumText {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 600;
 }
 
 .largeText {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .lowOpacityText {
@@ -39,14 +39,22 @@
 }
 
 #locationInfoAndInputFieldContainer {
-    padding: 35px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 80%;
+    padding: 35px 10px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     background-color: white;
     border-radius: 5px;
-    box-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#locationInfoContainer {
+    border-right: 1px solid rgba(0, 0, 0, 0.507);
+    padding: 0 25px;
 }
 
 #restaurantName {
@@ -82,5 +90,104 @@
     margin-left: 17.5px;
 }
 
+#inputFieldContainer {
+    padding: 0 25px;
+}
+
+.waitTimeDisplayContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
 
 
+
+.tealText {
+    color: #00afaf;
+}
+
+.redText {
+    color: #fd3131;
+}
+
+
+.liveText {
+    font-size: 12px;
+    position: relative;
+    margin-right: 5px;
+    font-weight: 400;
+    padding: 2px 3px;
+    border-radius: 3px;
+    color: white;
+    background-color: #00afaf;
+}
+
+.forPulsingAnimation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    border-radius: inherit;
+    opacity: .8;
+    border: 2px solid #00afaf;
+    animation: pulseAnimation 2s ease-out infinite;
+}
+
+@keyframes pulseAnimation {
+    100% {
+        opacity: 0;
+        transform: scale(1.4);
+    }
+}
+
+
+.selectPartySizeContainer {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.radioAndInfoHeader {
+    margin-bottom: 15px;
+}
+
+.partySizeLabel {
+    border: 0.5px solid rgba(0, 0, 0, 0.3);
+    color: #060a1fb4;
+    width: 80px;
+    height: 50px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.activeRadio {
+    background-color: #00afaf;
+    color: white;
+    border: 0.5px solid #00afaf;
+}
+
+.partySizeInput {
+    display: none;
+}
+
+.twoInputDisplayContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.inputFields {
+    width: 100%;
+    padding: 15px 10px;
+    margin-bottom: 20px;
+    border: 0.5px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.inputFields:focus {
+    outline: 1px solid #00afafb9;
+}
