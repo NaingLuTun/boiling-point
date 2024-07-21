@@ -36,6 +36,20 @@
 #waitListPageBG {
     width: 100%;
     filter: brightness(0.6);
+    margin-bottom: 30%;
+}
+
+#waitListMainContent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 #locationInfoAndInputFieldContainer {
@@ -43,17 +57,13 @@
     grid-template-columns: 1fr 2fr;
     width: 80%;
     padding: 35px 10px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
     background-color: white;
     border-radius: 5px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 #locationInfoContainer {
-    border-right: 1px solid rgba(0, 0, 0, 0.507);
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
     padding: 0 25px;
 }
 
@@ -94,10 +104,18 @@
     padding: 0 25px;
 }
 
+#waitListInputHeader {
+    margin-bottom: 30px;
+}
+
 .waitTimeDisplayContainer {
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
+    
+}
+
+.waitTimeUnavailableText {
+    color: grey;
 }
 
 
@@ -115,6 +133,7 @@
     font-size: 12px;
     position: relative;
     margin-right: 5px;
+    margin-left: 0px;
     font-weight: 400;
     padding: 2px 3px;
     border-radius: 3px;
@@ -142,15 +161,14 @@
     }
 }
 
+.radioAndInfoHeader {
+    margin-bottom: 15px;
+}
 
 .selectPartySizeContainer {
     display: flex;
     gap: 30px;
     margin-bottom: 20px;
-}
-
-.radioAndInfoHeader {
-    margin-bottom: 15px;
 }
 
 .partySizeLabel {
@@ -164,6 +182,11 @@
     justify-content: center;
 }
 
+.partySizeLabel:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 8px rgba(128, 128, 128, 0.25);
+}
+
 .activeRadio {
     background-color: #00afaf;
     color: white;
@@ -174,20 +197,91 @@
     display: none;
 }
 
+.largePartyText {
+    margin-bottom: 15px;
+}
+
 .twoInputDisplayContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
 }
 
+.individualInputContainer {
+    margin-bottom: 20px;
+}
+
 .inputFields {
     width: 100%;
     padding: 15px 10px;
-    margin-bottom: 20px;
-    border: 0.5px solid rgba(0, 0, 0, 0.3);
+    border: 0.5px solid rgba(0, 0, 0, 0.7);
     border-radius: 5px;
 }
 
 .inputFields:focus {
+    border: none;
     outline: 1px solid #00afafb9;
+}
+
+.inputFields:disabled {
+    border: 0.5px solid rgba(0, 0, 0, 0.3);
+    opacity: 0.6;
+}
+
+.errorMessage {
+    display: inline;
+}
+
+.submitBtn {
+    width: 20%;
+    background-color: #00afaf;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+.submitBtn:hover {
+    box-shadow: 2px 2px 8px rgba(128, 128, 128, 0.25);
+}
+
+.submitBtn:disabled {
+    opacity: 0.7;
+    background-color: rgba(128, 128, 128, 0.3);
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.submitBtn:disabled:hover {
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+hr {
+    opacity: 0.5;
+}
+
+.waitListFooter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    color: #02020c;
+    padding: 50px 0;
+}
+
+#footerSection > h2 {
+    font-weight: 400;
+}
+
+#socialLogosContainer {
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.socialLogos:hover {
+    cursor: pointer;
 }
