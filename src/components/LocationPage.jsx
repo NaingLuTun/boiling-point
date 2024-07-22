@@ -114,7 +114,7 @@ const LocationPage = () => {
                     <div id="waitlist">
                         <p id="waitlistText">Waitlist</p>
                         <div id="waitTimeContainer">
-                            <p id="waitTime">11-20 mins <span className="liveText">Live <span className="forPulsingAnimation"></span></span></p> 
+                            <p id="waitTime">5-12 mins <span className="liveText">Live <span className="forPulsingAnimation"></span></span></p> 
                             
                             
                             
