@@ -11,6 +11,7 @@
 #WaitListPage {
     height: 100vh;
     width: 100%;
+    background-color: white;
     color: #060a1f;
     font-family: "Lato", sans-serif;
 }
