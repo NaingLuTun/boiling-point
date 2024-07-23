@@ -372,7 +372,7 @@ const LocationPage = () => {
                             <></>
                         )}
 
-                        <div className="setInfoSections">
+                        <div className="setInfoSections lastSetInfoSection">
                             <h2 className="nonAlcoholicDrinksHeader infoHeaders">
                                 NON ALCOHOLIC DRINKS
                             </h2>

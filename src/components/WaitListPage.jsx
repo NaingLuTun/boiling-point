@@ -136,7 +136,6 @@ const WaitListPage = () => {
 
     return (
         <div id="WaitListPage">
-            <img id="waitListPageBG" src={waitListPageBG} alt="Background Image" />
             <div id="waitListMainContent">
                 <div id="locationInfoAndInputFieldContainer">
                     <div id="locationInfoContainer">
@@ -292,7 +291,6 @@ const WaitListPage = () => {
                 </div>
             )}
 
-            <hr />
              
              <footer className="waitListFooter">
 

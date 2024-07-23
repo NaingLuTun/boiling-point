@@ -211,6 +211,10 @@
     background-color: white;
 }
 
+.lastSetInfoSection {
+    margin-bottom: 0;
+}
+
 .infoHeaders {
     color: #c03004;
     font-weight: 400;
@@ -425,6 +429,10 @@
     .setInfoSections {
         margin: 80px 0;
         background-color: white;
+    }
+
+    .lastSetInfoSection {
+        margin-bottom: 0;
     }
     
     .infoHeaders {
@@ -642,6 +650,9 @@
     .setInfoSections {
         margin: 80px 0;
         background-color: white;
+    }
+    .lastSetInfoSection {
+        margin-bottom: 0;
     }
     
     .infoHeaders {
