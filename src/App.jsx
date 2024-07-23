@@ -13,7 +13,7 @@ function App() {
 
   return (
     <LocationContextProvider>
-      <Router>
+      <Router basename="/boiling-point">
         <Routes>
           <Route path="/home-page" element={<HomePage />} />
           <Route path="location-page" element={<LocationPage />} />
