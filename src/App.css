@@ -21,3 +21,10 @@ body {
     width: 100%;
     background-color: white;
 }
+
+/* Override dark mode preferences */
+@media (prefers-color-scheme: dark) {
+    body {
+      background-color: white !important;
+    }
+  }
