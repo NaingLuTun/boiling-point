@@ -309,6 +309,7 @@ hr {
     #waitListPageBG {
         width: 100%;
         filter: brightness(0.6);
+        background-color: white;
         margin-bottom: 280%;
     }
     
@@ -384,6 +385,7 @@ hr {
     #waitListPageBG {
         width: 100%;
         filter: brightness(0.6);
+        background-color: white;
         margin-bottom: 120%;
     }
     
